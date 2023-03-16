@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncapsulationStudy", "EncapsulationStudy.csproj", "{3FECC2BC-13F8-497A-B037-77274D859F48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch", "..\BasicsDotNetStudy\Switch.csproj", "{53117818-9D67-459C-85D3-E8F4D0CA8886}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoxingUnboxing", "..\BoxingUnboxing\BoxingUnboxing.csproj", "{A401479A-C551-46F1-9A4D-F64DF63B8243}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionStudy", "..\CollectionStudy\CollectionStudy.csproj", "{AE7B4068-F96C-4CFF-A734-4306A6070769}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandling", "..\ExceptionHandling\ExceptionHandling.csproj", "{8CEA4071-FE3A-4C22-9B34-86A02FD075EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "..\StringBuilder\StringBuilder.csproj", "{3291C8FB-41A2-4EB8-8501-CFAB01B0C0A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateEventStudy", "..\DelegateEventStudy\DelegateEventStudy.csproj", "{8F984BF0-5C54-4D45-ADC3-5AE86B90E504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FECC2BC-13F8-497A-B037-77274D859F48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FECC2BC-13F8-497A-B037-77274D859F48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FECC2BC-13F8-497A-B037-77274D859F48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FECC2BC-13F8-497A-B037-77274D859F48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53117818-9D67-459C-85D3-E8F4D0CA8886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53117818-9D67-459C-85D3-E8F4D0CA8886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53117818-9D67-459C-85D3-E8F4D0CA8886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53117818-9D67-459C-85D3-E8F4D0CA8886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A401479A-C551-46F1-9A4D-F64DF63B8243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A401479A-C551-46F1-9A4D-F64DF63B8243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A401479A-C551-46F1-9A4D-F64DF63B8243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A401479A-C551-46F1-9A4D-F64DF63B8243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE7B4068-F96C-4CFF-A734-4306A6070769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE7B4068-F96C-4CFF-A734-4306A6070769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE7B4068-F96C-4CFF-A734-4306A6070769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE7B4068-F96C-4CFF-A734-4306A6070769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CEA4071-FE3A-4C22-9B34-86A02FD075EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEA4071-FE3A-4C22-9B34-86A02FD075EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEA4071-FE3A-4C22-9B34-86A02FD075EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEA4071-FE3A-4C22-9B34-86A02FD075EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3291C8FB-41A2-4EB8-8501-CFAB01B0C0A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3291C8FB-41A2-4EB8-8501-CFAB01B0C0A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3291C8FB-41A2-4EB8-8501-CFAB01B0C0A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3291C8FB-41A2-4EB8-8501-CFAB01B0C0A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F984BF0-5C54-4D45-ADC3-5AE86B90E504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F984BF0-5C54-4D45-ADC3-5AE86B90E504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F984BF0-5C54-4D45-ADC3-5AE86B90E504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F984BF0-5C54-4D45-ADC3-5AE86B90E504}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9905AF8B-F3B1-4841-9419-D3CF21A1C909}
+	EndGlobalSection
+EndGlobal
