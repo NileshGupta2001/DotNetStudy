@@ -11,7 +11,11 @@ namespace FileHandling
         public string FilePath = "E://Study.txt";
         public void ReadFile()
         {
-
+            FileStream fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+            StreamReader sr = new StreamReader(fs);
+            string FileContent=sr.ReadToEnd();
+            Console.WriteLine(FileContent);
+           
         }
 
         public void WriteFile()

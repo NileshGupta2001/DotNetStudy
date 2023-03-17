@@ -2,4 +2,5 @@
 using FileHandling;
 Console.WriteLine("Hello, World!");
 FileHandlingExample fhe = new FileHandlingExample();
-fhe.WriteFile();
+//fhe.WriteFile();
+fhe.ReadFile();
