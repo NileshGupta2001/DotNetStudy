@@ -44,6 +44,17 @@ namespace ThreadingStudy
             }
         }
 
+        public void DisplayMessage()
+        {
+           lock (obj1)
+           { 
+                
+                Console.Write("[Welcome to the ");
+                Thread.Sleep(1000);
+                Console.WriteLine("world of dotnet!]");
+           }
+        }
+
         //ForeGround Thread -> Handles UI processes
         //BackGround Thread -> Handles Background processes
     }
