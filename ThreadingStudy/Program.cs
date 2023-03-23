@@ -28,8 +28,13 @@ tpe.CreateThreadUsingThreadPool();
 #endregion
 
 #region TaskStudy
-TaskStudy.CreateTaskAndCall();
-Console.ReadLine();
+//TaskStudy.CreateTaskAndCall();
+//Console.ReadLine();
+#endregion
+
+#region AsyncAwait
+AsyncAwaitExample awe = new AsyncAwaitExample();
+awe.MyCallerFunction();
 #endregion
 
 //tl.DoWorkOne();

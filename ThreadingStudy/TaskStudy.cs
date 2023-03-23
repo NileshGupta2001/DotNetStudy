@@ -14,13 +14,22 @@ namespace ThreadingStudy
         public static void ShowMessage()
         {
             Console.WriteLine("Message Here");
+            Thread.Sleep(100);
+            Console.WriteLine("Next Message");
         }
          
         public static void CreateTaskAndCall()
         {
             Action action = ShowMessage;
             Task t = new Task(action);
+            Task t1 = new Task(action);
             t.Start();
+            t1.Start();
+            t1.Wait(1000);
+
+            
         }
+
+
     }
 }
