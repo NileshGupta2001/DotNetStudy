@@ -8,8 +8,8 @@ namespace InheritanceStudy
 {
     internal class Vehicle
     {
-        public string color;
-        public string name;
+        public string color { get; set; } 
+        public string name { get; set; }
         public virtual void Start() 
         {
             Console.WriteLine("Vehicle Started");
