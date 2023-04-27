@@ -75,5 +75,21 @@ namespace DataAccessLayer
             return value;
         }
 
+        public bool Delete(string ID)
+        {
+            bool value = true;
+            using (SqlConnection conn = new SqlConnection(cs))
+            {
+                SqlCommand cmd = new SqlCommand("delete_data", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@ID",ID));
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
+            return value;
+        }
+
     }
 }

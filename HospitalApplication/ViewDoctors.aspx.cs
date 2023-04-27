@@ -15,11 +15,13 @@ namespace HospitalApplication
     {
         
         protected void Page_Load(object sender, EventArgs e)
-        {
-            DbContext obj = new DbContext();
-            var doctorlist = obj.GetDoctors();
-            grdDoctorData.DataSource = doctorlist;
-            grdDoctorData.DataBind();
+        {   if (!IsPostBack)
+            {
+                DbContext obj = new DbContext();
+                var doctorlist = obj.GetDoctors();
+                grdDoctorData.DataSource = doctorlist;
+                grdDoctorData.DataBind();
+            }
 
         }
 
@@ -30,11 +32,27 @@ namespace HospitalApplication
             var doctorlist = obj.GetDoctors();
             grdDoctorData.DataSource = doctorlist;
             grdDoctorData.DataBind();
+            
+
         }
 
-        protected void grdDoctorData_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        protected void grdDoctorData_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if(e.CommandName=="Delete")
+            {
+                var ID = e.CommandArgument;
+                DbContext obj = new DbContext();
+                obj.Delete(ID.ToString());
+                var doctorlist = obj.GetDoctors(); 
+                grdDoctorData.DataSource = doctorlist;
+                grdDoctorData.DataBind();
+                Response.Redirect(Request.RawUrl, true);
+            }
 
+            if(e.CommandName=="Edit")
+            {
+
+            }
         }
     }
 

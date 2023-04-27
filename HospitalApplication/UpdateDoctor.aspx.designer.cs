@@ -11,16 +11,16 @@ namespace HospitalApplication
 {
 
 
-    public partial class ViewDoctors
+    public partial class UpdateDoctor
     {
 
         /// <summary>
-        /// grdDoctorData control.
+        /// grdUpdDoctorData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdDoctorData;
+        protected global::System.Web.UI.WebControls.GridView grdUpdDoctorData;
     }
 }
