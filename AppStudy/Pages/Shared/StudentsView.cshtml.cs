@@ -5,7 +5,7 @@ namespace AppStudy.Pages.Shared
 {
     public class StudentsViewModel : PageModel
     {
-        //public List<Student> lstStudents = new List<Student>();
+        public List<Student> lstStudents = new List<Student>();
         public Student objStud { get; set; } 
         public StudentsViewModel()
         {
@@ -14,12 +14,33 @@ namespace AppStudy.Pages.Shared
             objStud.StudentName = "nilesh";
             objStud.Marks = 90;
 
-            //Student obj = new Student();
-            //obj.StudId = 1;
-            //obj.StudentName = "nilesh";
-            //obj.Marks = 90;
+            Student obj = new Student();
+            obj.StudId = 1;
+            obj.StudentName = "nilesh";
+            obj.Marks = 90;
 
-            //lstStudents.Add(obj);
+            lstStudents.Add(obj);
+
+            Student obj2 = new Student();
+            obj2.StudId = 2;
+            obj2.StudentName = "ranveer";
+            obj2.Marks = 100;
+
+            lstStudents.Add(obj2);
+
+            Student obj3 = new Student();
+            obj3.StudId = 3;
+            obj3.StudentName = "Surya";
+            obj3.Marks = 100;
+
+            lstStudents.Add(obj3);
+
+            Student obj4 = new Student();
+            obj4.StudId = 4;
+            obj4.StudentName = "rahul";
+            obj4.Marks = 100;
+
+            lstStudents.Add(obj4);
 
         }
 
