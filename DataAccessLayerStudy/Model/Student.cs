@@ -1,8 +1,8 @@
-﻿namespace AppStudy.Pages.Model
+﻿namespace DataAccessLayerStudy.Model
 {
     public class Student
     {
-        public int StudId;
+        public int ID;
         public string StudentName;
         public int Marks;
 
