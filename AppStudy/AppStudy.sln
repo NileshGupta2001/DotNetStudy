@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppStudy", "AppStudy.csproj", "{41EB692B-841A-4BC9-95DA-100E8D6036E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppStudy", "AppStudy.csproj", "{41EB692B-841A-4BC9-95DA-100E8D6036E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayerStudy", "..\DataAccessLayerStudy\DataAccessLayerStudy.csproj", "{5C3C7B16-74E4-4728-94E1-544A42A25DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayerStudy", "..\DataAccessLayerStudy\DataAccessLayerStudy.csproj", "{5C3C7B16-74E4-4728-94E1-544A42A25DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

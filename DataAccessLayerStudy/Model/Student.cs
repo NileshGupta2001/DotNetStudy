@@ -1,10 +1,13 @@
-﻿namespace DataAccessLayerStudy.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DataAccessLayerStudy.Model
 {
     public class Student
     {
-        public int ID;
-        public string StudentName;
-        public int Marks;
+        [Key]
+        public int ID { get; set; }
+        public string StudentName { get; set; }
+        public int Marks { get; set; }
 
     }
 }

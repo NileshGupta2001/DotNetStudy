@@ -13,7 +13,7 @@ namespace DataAccessLayerStudy
     //2) Database First Approach
     public class ApplicationDBContext:DbContext
     {
-        string connectionString = @"server = DESKTOP-QG50OON\SQLEXPRESS;initial catalog = EFStudy; integrated security = true";
+        string connectionString = @"server = DESKTOP-QG50OON\SQLEXPRESS;initial catalog = EFStudy; integrated security = true;TrustServerCertificate=True ";
         DbSet<Student> Students { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseSqlServer(connectionString);

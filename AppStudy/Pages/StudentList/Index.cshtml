@@ -1,11 +1,13 @@
 ﻿@page
-@model AppStudy.Pages.Shared.StudentsViewModel
+@model AppStudy.Pages.StudentList.IndexModel
 @{
-
 }
-
-	<h1>Student Data</h1>
-	@*<div>
+<h1>Student Data</h1>
+<div>
+	<a asp-page="_123Create">Create New Student</a>
+</div>
+	
+	<div>
 	<form>
 	<div class="col-12 border p-3 mt-3">
 		@if (Model.lstStudents.Count()>=1)
@@ -51,4 +53,4 @@
 			<!--input type="text" asp-for="objStud.StudentName" /-->
 	</div>
 	</form>
-	</!--div>*@
+	</div>
