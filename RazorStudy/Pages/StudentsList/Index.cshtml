@@ -1,0 +1,63 @@
+﻿@page
+@model RazorStudy.Pages.StudentsList.IndexModel
+@{
+}
+<h1>Student Data</h1>
+<div>
+	<a asp-page="Create">Create new student</a>
+</div>
+	
+	<div>
+	<form>
+	<div class="col-12 border p-3 mt-3">
+		@if (Model.lstStudents.Count()>=1)
+			{
+				
+			
+		<table class="table table-striped border">
+
+			
+				<tr class="table-secondary">
+					<th>
+						<label asp-for="lstStudents.FirstOrDefault().ID"></label>
+					</th>
+					<th>
+						<label asp-for="lstStudents.FirstOrDefault().StudentName"></label>
+					</th>
+					<th>
+						<label asp-for="lstStudents.FirstOrDefault().Marks"></label>
+					</th>
+					<th>
+						<label>Action</label>
+					</th>
+				</tr>
+
+				@foreach(var item in Model.lstStudents	)
+				{
+				<tr>
+					<td>
+						@Html.DisplayFor(m=>item.ID)
+					</td>
+					<td>
+						@Html.DisplayFor(m=>item.StudentName)
+					</td>
+					<td>
+						@Html.DisplayFor(m=>item.Marks)
+					</td>
+					<td>
+						<button class="btn btn-danger">Delete</button>
+						<a asp-page="Edit" asp-route-id="@item.ID" class="btn btn-success" >Edit</a>
+					</td>
+				</tr>
+				}
+
+				</table>
+			}
+			else
+			{
+				<p>No Data</p>
+			}
+			<!--input type="text" asp-for="objStud.StudentName" /-->
+	</div>
+	</form>
+	</div>
