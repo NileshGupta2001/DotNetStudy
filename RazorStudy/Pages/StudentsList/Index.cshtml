@@ -8,7 +8,7 @@
 </div>
 	
 	<div>
-	<form>
+	<form method="post">
 	<div class="col-12 border p-3 mt-3">
 		@if (Model.lstStudents.Count()>=1)
 			{
@@ -45,8 +45,8 @@
 						@Html.DisplayFor(m=>item.Marks)
 					</td>
 					<td>
-						<button class="btn btn-danger">Delete</button>
-						<a asp-page="Edit" asp-route-id="@item.ID" class="btn btn-success" >Edit</a>
+						<button class="btn btn-danger" asp-route-id="@item.ID" asp-page-handler="Delete">Delete</button>
+						<a asp-page="Edit1" asp-route-id="@item.ID" class="btn btn-success" >Edit</a>
 					</td>
 				</tr>
 				}

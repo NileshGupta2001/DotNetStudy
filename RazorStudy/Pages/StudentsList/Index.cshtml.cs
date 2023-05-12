@@ -54,5 +54,15 @@ namespace RazorStudy.Pages.StudentsList
         {
             lstStudents=db.Students.ToList();
         }
+
+        public IActionResult OnPostDelete(int ID)
+        {
+           
+            var student = db.Students.SingleOrDefault(x => x.ID == ID);
+            db.Students.Remove(student);
+            db.SaveChanges();
+            return RedirectToPage("Index");
+
+        }
     }
 }
