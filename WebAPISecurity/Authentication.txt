@@ -1,0 +1,11 @@
+﻿Types of Authentication:
+
+1) Basic Authentication
+2) Token Based Authentication
+3) API key authentication
+
+ User
+ {
+ UserID , Password, Role
+
+ }

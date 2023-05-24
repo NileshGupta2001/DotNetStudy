@@ -70,9 +70,18 @@ namespace WebAPIStudy.Controllers
                 return NotFound();
             }
 
-
+            
 
         }
+       
+        [HttpGet(Name = "SearchDoctor")]
+        public IActionResult SearchDoctor(string valueSearch)
+        {
+            //var existingDoctor = Db.Doctors.Find(x => x.Name.);
+            lstDoctor = Db.Doctors.ToList();
+            return Ok(lstDoctor);
+        }
+
 
         public DoctorController(ApplicationDBContext _db)
         {
