@@ -34,5 +34,25 @@ namespace WebAPISecurity.Controllers
             }
 
         }
+
+        [HttpGet]
+        public async Task<ActionResult<User>> ReadUser(string username)
+        {
+
+            IdentityUser user = await userManager.FindByNameAsync( username);
+            if (user!=null)
+            {
+                User objUser = new User();
+                objUser.UserName = user.UserName;
+                objUser.Email = user.Email;
+                return objUser;
+            }
+            else
+            {
+                return NotFound();
+            }
+
+        }
+
     }
 }
