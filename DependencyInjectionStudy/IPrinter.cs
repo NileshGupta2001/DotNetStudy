@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionStudy
 {
-    public class LaserPrinter : IPrinter
+    public interface IPrinter
     {
-        public void Print()
-        {
-            Console.WriteLine("Document Printed by Laser PrinterS");
-        }
+        public void Print();
+        
     }
 }

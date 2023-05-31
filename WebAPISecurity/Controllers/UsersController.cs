@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebAPISecurity.Model;
+using WebAPISecurity.Services;
 
 namespace WebAPISecurity.Controllers
 {
@@ -9,10 +10,12 @@ namespace WebAPISecurity.Controllers
     public class UsersController : ControllerBase
     {
         private UserManager<IdentityUser> userManager;
+        private JwtService jwtService;
 
-        public UsersController(UserManager<IdentityUser> userManager)
+        public UsersController(UserManager<IdentityUser> userManager,JwtService jwt)
         {
             this.userManager = userManager;
+            this.jwtService = jwt;
         }
 
         [HttpPost]
@@ -53,6 +56,7 @@ namespace WebAPISecurity.Controllers
             }
 
         }
+
 
     }
 }

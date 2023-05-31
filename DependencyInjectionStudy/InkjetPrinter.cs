@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DependencyInjectionStudy
 {
-    public class InkjetPrinter
+    public class InkjetPrinter : IPrinter
     {
         public void Print()
         {

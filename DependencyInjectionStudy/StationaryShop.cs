@@ -9,17 +9,17 @@ namespace DependencyInjectionStudy
     public class StationaryShop
     {
         public string ShopOwner;
-        public InkjetPrinter laserPrinter;
+        public IPrinter printer;
 
-        public StationaryShop()
+        public StationaryShop(IPrinter objPrinter)
         {
-            laserPrinter = new InkjetPrinter();
+            this.printer= objPrinter;
             
         }
 
         public void PrintDocument()
         {
-            laserPrinter.Print();
+            printer.Print();
         }
     }
 }
