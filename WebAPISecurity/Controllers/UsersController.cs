@@ -57,6 +57,21 @@ namespace WebAPISecurity.Controllers
 
         }
 
+        
+
+        [HttpPost("BearerToken")]
+        public async Task<ActionResult<AuthenticationResponse>> CreateBearerToken (AuthenticationRequest authenticationRequest)
+        {
+            IdentityUser user = await userManager.FindByNameAsync(authenticationRequest.UserName);
+            bool IsPasswordValid = await userManager.CheckPasswordAsync(user, authenticationRequest.Password);
+            if(!IsPasswordValid)
+            {
+                return BadRequest("Wrong Password");
+            }
+            var token = jwtService.CreateToken(user);
+            return Ok(token);
+        }
+        
 
     }
 }

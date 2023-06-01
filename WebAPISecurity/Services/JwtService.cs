@@ -38,7 +38,9 @@ namespace WebAPISecurity.Services
         {
             return new SigningCredentials(
                 new SymmetricSecurityKey(
-                    Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])
+                    //Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])
+                    Encoding.UTF8.GetBytes("this is the secret key for the jwt, it must be kept secure")
+
                 ),
                 SecurityAlgorithms.HmacSha256
             );
@@ -48,8 +50,10 @@ namespace WebAPISecurity.Services
         {
 
             return new JwtSecurityToken(
-                _configuration["Jwt:Issuer"],
-                _configuration["Jwt:Audience"],
+                //_configuration["Jwt:Issuer"],
+                "WebAPISecurity.endpointdev.com",
+                //_configuration["Jwt:Audience"],
+                "WebAPISecurity.endpointdev.com",
                 claims,
                 expires: expiration,
                 signingCredentials: credentials
@@ -62,7 +66,8 @@ namespace WebAPISecurity.Services
         private Claim[] CreateClaims(IdentityUser user) 
         {
           return  new[] {
-                new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
+                //new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]),
+                new Claim(JwtRegisteredClaimNames.Sub, "JWT for WebAPISecurity.endpointdev.com"),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
