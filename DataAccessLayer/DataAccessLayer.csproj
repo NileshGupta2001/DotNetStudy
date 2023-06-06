@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DbContext.cs" />
     <Compile Include="Models\DoctorModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
