@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 using WebAPISecurity;
 using WebAPISecurity.Services;
 
@@ -16,6 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
 builder.Services
     .AddIdentityCore<IdentityUser>(options => {
         options.SignIn.RequireConfirmedAccount = false;
@@ -27,6 +31,23 @@ builder.Services
         options.Password.RequireLowercase = false;
     }).AddEntityFrameworkStores<ApplicationDBContext>();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidAudience = "WebAPISecurity.endpointdev.com",
+            ValidIssuer = "WebAPISecurity.endpointdev.com",
+IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes("this is the secret key for the jwt, it must be kept secure")
+            )
+        };
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -37,6 +58,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
