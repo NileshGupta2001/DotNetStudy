@@ -1,0 +1,48 @@
+﻿@model List<IPLPlayer>
+<h2>
+	IPL PLAYERS 
+	
+	<a  asp-controller="Player" asp-action="Create" class="btn btn-primary">Add New Player</a>
+</h2>
+<table>
+	<thead>
+		<tr>
+		<th>
+			ID
+		</th>
+		<th>
+			Name
+			</th>
+			<th>
+				Team Name
+			</th>
+			<th>
+				Edit/Delete
+			</th>
+		</tr>
+
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@item.ID
+				</td>
+				<td>
+					@item.Name
+				</td>
+				<td>
+					@item.TeamName
+				</td>
+				<td>
+					<a class="btn btn-primary" asp-route-id="@item.ID" asp-action="Edit" asp-controller="Player">Edit</a>
+					<button class="btn btn-danger" asp-route-id="@item.ID" asp-action="Delete" asp-controller="Player">Delete</button>
+				</td>
+			</tr>
+		}	
+		
+	</tbody>
+
+
+</table>

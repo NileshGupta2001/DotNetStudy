@@ -1,0 +1,33 @@
+﻿@model IPLPlayer
+	<form method="post" >
+	<table>
+		<tr>
+			<td>
+	<label>Name</label></td>
+	<td>
+		
+	<input type ="text" style="width:100px; length:100px;" asp-for="Name"/></td>
+		</tr>
+		<tr>
+			<td>
+				<label>
+					Team
+				</label>
+
+			</td>
+			<td>
+				<input type="text" style="width:100px; length:100px;" asp-for="TeamName"/>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a asp-controller="Player" asp-action="Index" class="btn btn-secondary">Cancel</a>
+
+			</td>
+			<td>
+				<button type="submit" class="btn btn-primary">Update Data</button>
+			</td>
+		</tr>
+		</table>
+		</form>
+
